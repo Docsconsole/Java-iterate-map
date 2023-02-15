@@ -56,6 +56,11 @@ public class MapIterationExample {
                 System.out.println("No : " + e.getKey() + " Content : " + e.getValue())
         );
 
+        Iterator<Map.Entry<Integer, String>> mapIterator = countriesMap.entrySet().iterator();
+        while (mapIterator.hasNext()) {
+            Map.Entry<Integer, String> entrySet =  mapIterator.next();
+            System.out.println("No = " + entrySet.getKey() + ", Country: = " + entrySet.getValue());
+        }
         //6. Iterating over keySet of map (not efficient)
         Map<String, String> capitalCountryMap = new HashMap<>();
         capitalCountryMap.put("NewDelhi", "India");
